@@ -19,6 +19,7 @@ public class TicTocToe {
 		}
 		System.out.println("Player :" +player+ " computer :" + computer);
 		printBoard(board);
+	//	selectIndex(board);
 	}
 	private static char[] createBoard() {
 		char[] board=new char[10];
@@ -44,6 +45,7 @@ public class TicTocToe {
 		 System.out.println("| " + board[7] + " | " + board[8] + " | " + board[9] + " |");
 		 System.out.println("|-----------|");
 	}
+	
 	
 
 }
