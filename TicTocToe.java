@@ -1,10 +1,24 @@
 package ticTocToe;
 
+import java.util.Scanner;
+
 public class TicTocToe {
 
 	public static void main(String[] args) {
 		System.out.println(" Welcome ");
 		char[] board=createBoard();
+		char computer;
+		char player=letterSelect();
+		if(player=='X') 
+		{
+			computer='O';
+		}
+		else 
+		{
+			computer='X';
+		}
+		System.out.println("Player :" +player+ " computer :" + computer);
+	//	printBoard(board);
 	}
 	private static char[] createBoard() {
 		char[] board=new char[10];
@@ -12,7 +26,17 @@ public class TicTocToe {
 		{
 			board[i]=' ';
 		}
+		System.out.println("Board is created and starting positon is 0");
 		return board;
 	}
+	public static char letterSelect() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter For player(X/0)");
+		char player=sc.next().charAt(0);
+		return player;
+		
+	}
+	
+	
 
 }
