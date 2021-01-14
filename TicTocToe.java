@@ -19,7 +19,7 @@ public class TicTocToe {
 		}
 		System.out.println("Player :" +player+ " computer :" + computer);
 		printBoard(board);
-	//	selectIndex(board);
+		selectIndex(board);
 	}
 	private static char[] createBoard() {
 		char[] board=new char[10];
@@ -45,7 +45,19 @@ public class TicTocToe {
 		 System.out.println("| " + board[7] + " | " + board[8] + " | " + board[9] + " |");
 		 System.out.println("|-----------|");
 	}
-	
+	public static void selectIndex(char board[]) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter index from 1 to 9 :");
+		int index=sc.nextInt();
+		if(board[index]==' ') 
+		{
+			System.out.println("Index is free");
+		}
+		else 
+		{
+			System.out.println("index is not free");
+		}
+	}
 	
 
 }
