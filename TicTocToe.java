@@ -4,11 +4,13 @@ import java.util.Scanner;
 
 public class TicTocToe {
 
+	public static char player=' ';
+	public static char[] board;
 	public static void main(String[] args) {
 		System.out.println(" Welcome ");
 		char[] board=createBoard();
 		char computer;
-		char player=letterSelect();
+		player=letterSelect();
 		if(player=='X') 
 		{
 			computer='O';
@@ -52,11 +54,16 @@ public class TicTocToe {
 		if(board[index]==' ') 
 		{
 			System.out.println("Index is free");
+			makeMove(board,index,player);
 		}
 		else 
 		{
 			System.out.println("index is not free");
 		}
+	}
+	public static void makeMove(char board[],int index,char player) {
+		board[index]=player;
+		printBoard(board);
 	}
 	
 
